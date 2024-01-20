@@ -1,0 +1,13 @@
+name: whichlang
+version: 0.1.0
+
+authors:
+  - Ben D'Angelo <ben@bendangelo.me>
+
+targets:
+  whichlang:
+    main: src/whichlang.cr
+
+crystal: '>= 1.11.1'
+
+license: MIT

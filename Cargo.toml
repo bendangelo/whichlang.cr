@@ -1,0 +1,11 @@
+[package]
+name = "whichlang"
+version = "0.1.0"
+authors = ["Ben D'Angelo <ben@bendangelo.me>"]
+edition = "2021"
+
+[dependencies]
+whichlang = "0.1.0"
+
+[lib]
+crate-type = ["dylib"]
