@@ -8,6 +8,9 @@ targets:
   whichlang:
     main: src/whichlang.cr
 
-crystal: '>= 1.11.1'
+scripts:
+  postinstall: make
+
+crystal: '>= 1.0.0'
 
 license: MIT
