@@ -7,7 +7,7 @@ else
 endif
 
 all: target/release/whichlang.$(EXT)
-	LIBRARY_PATH=$(PWD)/target/release:$(LIBRARY_PATH) crystal build src/whichlang.cr -o whichlang
+	LIBRARY_PATH=$(PWD)/target/release:$(LIBRARY_PATH) crystal build --static src/whichlang.cr -o whichlang
 	LD_LIBRARY_PATH=./target/release ./whichlang
 
 target/release/whichlang.$(EXT): src/lib.rs Cargo.toml
