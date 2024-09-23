@@ -1,6 +1,9 @@
-# whichlang
+# Whichlang
 
 This implements `detect_language` bindings from the Rust library [Whichlang](https://github.com/quickwit-oss/whichlang/).
+
+* Works on Linux / Mac only.
+* Requires at least [Rust 1.56](https://blog.rust-lang.org/2021/10/21/Rust-1.56.0.html).
 
 Supported Languages:
 ```
@@ -46,6 +49,12 @@ Whichlang.detect(input) # => Whichlang::Lang::Eng
 # for nil responses
 input = " "
 Whichlang.detect?(input) # => nil
+```
+
+## Development
+
+```crystal
+make && crystal spec
 ```
 
 ## Contributing

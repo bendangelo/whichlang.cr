@@ -1,7 +1,11 @@
 module Whichlang
-  VERSION = "0.1.0"
+  VERSION = {{ `shards version "#{__DIR__}"`.stringify.chomp }}
 
-  @[Link(ldflags: "#{__DIR__}/ext/libwhichlang.so")]
+  {% if flag?(:darwin) %}
+    @[Link(ldflags: "#{__DIR__}/../target/release/libwhichlang.dylib")]
+  {% else %}
+    @[Link(ldflags: "#{__DIR__}/../target/release/libwhichlang.so")]
+  {% end %}
   lib LibWhichlang
     fun detect(UInt8*) : Int32
   end
